@@ -1,4 +1,4 @@
-# An opinionated guide on developing web applications with Spring Boot
+# An opinionated guide on web development with Spring Boot
 
 ## Dependency Injection
 

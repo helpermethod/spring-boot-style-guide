@@ -11,3 +11,5 @@
 @AutoWired
 private PersonRepository personRepositoy;
 ```
+
+http://olivergierke.de/2013/11/why-field-injection-is-evil/

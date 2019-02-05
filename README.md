@@ -32,7 +32,7 @@ public PersonService(PersonRepository personRepository) {
 
 ## Controllers
 
-* Use `GetMapping`, `PostMapping` etc. instead of the more generic `RequestMapping`.
+* Use `GetMapping`, `PostMapping` etc. instead of the generic `RequestMapping`.
 
 > Why?
 

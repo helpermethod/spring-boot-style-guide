@@ -1,4 +1,4 @@
-# An opinionated guide on application development with Spring Boot
+# Spring Boot Style Guide
 
 ## Dependency Injection
 

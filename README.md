@@ -34,7 +34,7 @@ public PersonService(PersonRepository personRepository) {
 
 * Use `@GetMapping`, `@PostMapping` etc. instead of the generic `@RequestMapping`.
 
-> Why? The newer 
+> Why? They are easier to read and force you to declare the request method.
  
 ```java
 // bad

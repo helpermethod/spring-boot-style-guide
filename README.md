@@ -32,10 +32,10 @@ public PersonService(PersonRepository personRepository) {
 
 ## Controllers
 
-* Use `GetMapping`, `PostMapping` etc. instead of the generic `RequestMapping`.
+* Use `@GetMapping`, `@PostMapping` etc. instead of the generic `@RequestMapping`.
 
-> Why?
-
+> Why? The newer 
+ 
 ```java
 // bad
 @RequestMapping(method = RequestMethod.GET, value = "/person/{id}")

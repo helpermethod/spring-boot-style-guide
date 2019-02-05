@@ -1,6 +1,6 @@
 # Spring Boot Style Guide
 
-An opinionated guide on application development with Spring Boot.
+A mostly reasonable approach to Spring Boot.
 
 ## Dependency Injection
 
@@ -30,3 +30,20 @@ public PersonService(PersonRepository personRepository) {
 }
 ```
 
+## Controllers
+
+* Use `GetMapping`, `PostMapping` etc. instead of the more generic `RequestMapping`.
+
+> Why?
+
+```java
+// bad
+@RequestMapping(method = RequestMethod.GET, value = "/person/{id}")
+public Person show(@PathVariable long id) {
+}
+
+// good
+@GetMapping("/person/{id}")
+public Person show(@PathVariable long id) {
+}
+```

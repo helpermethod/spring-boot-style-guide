@@ -47,3 +47,26 @@ public Person show(@PathVariable long id) {
 public Person show(@PathVariable long id) {
 }
 ```
+
+## Serialization and Deserialization
+
+```java
+public class Person {
+    private final String firstname;
+    private final String lastname;
+
+    @JsonCreator
+    public Person(String firstname, String lastname) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+    }
+
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+}
+```

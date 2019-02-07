@@ -32,6 +32,8 @@ public PersonService(PersonRepository personRepository) {
 
 ## Controllers
 
+### Request Mapping
+
 * Use `@GetMapping`, `@PostMapping` etc. instead of `@RequestMapping`.
 
 > Why? They are easier to read and force you to declare the request method.

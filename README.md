@@ -51,6 +51,7 @@ public Person show(@PathVariable long id) {
 ## Serialization and Deserialization
 
 ```java
+// good
 public class Person {
     private final String firstname;
     private final String lastname;

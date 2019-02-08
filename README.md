@@ -54,7 +54,9 @@ public Person show(@PathVariable long id) {
 
 ## Serialization
 
-* Do not map your JSON objects to Java Beans.
+* Do not map your JSON objects to JavaBean-like classess.
+
+> Why?
 
 ```java
 // bad

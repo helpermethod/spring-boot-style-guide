@@ -54,7 +54,31 @@ public Person show(@PathVariable long id) {
 
 ## Serialization
 
+* Do not map your JSON objects to Java Beans.
+
 ```java
+// bad
+public class Person {
+    privat String firstname;
+    private String lastname;
+
+    public void setFirstname() {
+        this.firstname = firstname;
+    }
+
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public void setLastname() {
+        this.lastname = lastname;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+}
+
 // good
 public class Person {
     private final String firstname;

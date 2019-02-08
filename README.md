@@ -1,5 +1,7 @@
 # Spring Boot Style Guide
 
+[![Join the chat at https://gitter.im/helpermethod/spring-boot-style-guide](https://badges.gitter.im/helpermethod/spring-boot-style-guide.svg)](https://gitter.im/helpermethod/spring-boot-style-guide?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 A mostly reasonable approach to Spring Boot.
 
 ## Dependency Injection

@@ -38,7 +38,7 @@ public PersonService(PersonRepository personRepository) {
 
 * Use `@GetMapping`, `@PostMapping` etc. instead of `@RequestMapping`.
 
-> Why? They are easier to read and force you to declare the request method.
+> Why? `@GetMapping`, `@PostMapping` etc. are easier to read and force you to declare the request method.
  
 ```java
 // bad
@@ -54,9 +54,9 @@ public Person show(@PathVariable long id) {
 
 ## Serialization
 
-* Do not map your JSON objects to JavaBean-like classess.
+* Do not map your JSON objects to JavaBeans.
 
-> Why?
+> Why? JavaBeans are mutable and split object construction across multiple calls.
 
 ```java
 // bad

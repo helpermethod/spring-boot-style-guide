@@ -50,7 +50,7 @@ public Person show(@PathVariable long id) {
 }
 ```
 
-## Serialization and Deserialization
+## Serialization
 
 ```java
 // good

@@ -8,10 +8,10 @@
 
 * Use `constructor injection`. Avoid `field injection`.
 
-> Why? Field injection hides dependencies and allows constructing objects in an invalid state.
+> Why? Constructor injection makes dependencies explicit and forces you to provide mandatory collaborators.
 
 ```java
-// really bad
+// bad
 @AutoWired
 private PersonRepository personRepositoy;
 

@@ -6,23 +6,14 @@
 
 ## Dependency Injection
 
-* Never use `field injection` or `setter injection`. Use `constructor injection` instead.
+* Use `constructor injection`. Avoid `field injection`.
 
-> Why? See [Why field injection is evil](
-http://olivergierke.de/2013/11/why-field-injection-is-evil/) for an in-depth discussion.
+> Why? Field injection hides dependencies and allows constructing objects in an invalid state.
 
 ```java
 // really bad
 @AutoWired
 private PersonRepository personRepositoy;
-
-// still bad
-private PersonRepository personRespository;
-
-@Autowired
-public void setPersonRepository(PersonRepository personRepository) {
-    this.personRepository = personRepository;
-}
 
 // good
 private final PersonRepository personRepository;

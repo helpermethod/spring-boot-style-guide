@@ -49,8 +49,6 @@ public class PersonController {
 ```
 
 * Use `@GetMapping`, `@PostMapping` etc. instead of `@RequestMapping`.
-
-> Why? These are easier to read and force you to declare the request method.
  
 ```java
 // bad

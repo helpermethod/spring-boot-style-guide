@@ -8,7 +8,7 @@ An opinionated guide on developing web applications with Spring Boot.
 
 * Use `constructor injection`. Avoid `field injection`.
 
-> Why? Constructor injection makes dependencies explicit and forces you to provide mandatory collaborators.
+> Why? Constructor injection makes dependencies explicit and forces you to provide all mandatory dependencies when creating instances of your component.
 
 ```java
 // bad
@@ -25,19 +25,44 @@ public PersonService(PersonRepository personRepository) {
 
 ## Controllers
 
+* Use `@RestController` when providing a RESTful API.
+
+```java
+// bad
+@Controller
+public class PersonController {
+    @ResponseBody
+    @GetMapping("/person/{id}")
+    public Person show(@PathVariable long id) {
+        // more code
+    }
+}
+
+// good
+@RestController
+public class PersonController {
+    @GetMapping("/person/{id}")
+    public Person show(@PathVariable long id) {
+        // more code
+    }
+}
+```
+
 * Use `@GetMapping`, `@PostMapping` etc. instead of `@RequestMapping`.
 
-> Why? `@GetMapping`, `@PostMapping` etc. are easier to read and force you to declare the request method.
+> Why? These are easier to read and force you to declare the request method.
  
 ```java
 // bad
 @RequestMapping(method = RequestMethod.GET, value = "/person/{id}")
 public Person show(@PathVariable long id) {
+    // more code
 }
 
 // good
 @GetMapping("/person/{id}")
 public Person show(@PathVariable long id) {
+    // more code
 }
 ```
 
@@ -75,6 +100,7 @@ public class Person {
     private final String firstname;
     private final String lastname;
 
+    // this requires at least Spring Boot 2.0 to work out of the box
     @JsonCreator
     public Person(String firstname, String lastname) {
         this.firstname = firstname;

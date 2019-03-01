@@ -23,6 +23,25 @@ public PersonService(PersonRepository personRepository) {
 }
 ```
 
+* Avoid single implementation interfaces
+
+```java
+// bad
+public interface PersonService {
+    Person createPerson(String firstname, String lastname);
+}
+
+public class PersonServiceImpl implements PersonService {
+    public Person createPerson(String firstname, String lastname) {
+        // more code
+    }
+}
+
+// good
+public class PersonService {
+}
+```
+
 ## Controllers
 
 * Use `@RestController` when providing a RESTful API.

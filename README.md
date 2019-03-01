@@ -25,7 +25,7 @@ public PersonService(PersonRepository personRepository) {
 
 * Avoid single implementation interfaces.
 
-> Why? TODO
+> Why? TBD
 
 ```java
 // bad

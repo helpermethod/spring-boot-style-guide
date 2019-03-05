@@ -23,6 +23,14 @@ public PersonService(PersonRepository personRepository) {
 }
 ```
 
+* Use `field injection` in integration tests.
+
+> Why? TBD
+
+```java
+TBD
+```
+
 * Avoid single implementation interfaces.
 
 > Why? TBD

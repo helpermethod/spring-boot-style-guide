@@ -99,7 +99,7 @@ public Person show(@PathVariable long id) {
 
 ## Serialization
 
-* Do not map your JSON objects to `JavaBeans.
+* Do not map your JSON objects to `JavaBeans`.
 
 > Why? JavaBeans are mutable and split object construction across multiple calls.
 

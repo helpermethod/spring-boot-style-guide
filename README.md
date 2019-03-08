@@ -1,14 +1,3 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
-
-- [Spring Boot Style Guide](#spring-boot-style-guide)
-  - [Dependency Injection](#dependency-injection)
-  - [Controllers](#controllers)
-  - [Serialization](#serialization)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
 # Spring Boot Style Guide
 
 An opinionated guide on developing web applications with Spring Boot.

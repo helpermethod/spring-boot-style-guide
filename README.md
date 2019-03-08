@@ -26,7 +26,7 @@ public PersonService(PersonRepository personRepository) {
 
 * Use `field injection` in integration tests.
 
-> Why? TBD
+> Why? ``
 
 ```java
 TBD
@@ -55,6 +55,8 @@ public class PersonService {
     }
 }
 ```
+
+Reference: [Stop overusing interfaces](http://blog.hovland.xyz/2017-04-22-stop-overusing-interfaces/)
 
 ## Controllers
 

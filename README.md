@@ -43,14 +43,14 @@ public interface PersonService {
 }
 
 public class PersonServiceImpl implements PersonService {
-    public Person create(String firstname, String lastname) {
+    public Person createPerson(String firstname, String lastname) {
         // more code
     }
 }
 
 // good
 public class PersonService {
-    public Person create(String firstname, String lastname) {
+    public Person createPerson(String firstname, String lastname) {
         // more code
     }
 }

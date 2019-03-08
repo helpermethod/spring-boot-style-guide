@@ -12,16 +12,20 @@ An opinionated guide on developing web applications with Spring Boot.
 > Why? Constructor injection makes dependencies explicit and forces you to provide all mandatory dependencies when creating instances of your component.
 
 ```java
-// bad
-@AutoWired
-private PersonRepository personRepositoy;
-
-// good
-private final PersonRepository personRepository;
-
-public PersonService(PersonRepository personRepository) {
-    this.personRepository = personRepository;
+public class PersonService {
+    // bad
+    @AutoWired
+    private PersonRepository personRepositoy;
 }
+
+public class PersonService {
+    // good
+    private final PersonRepository personRepository;
+
+    public PersonService(PersonRepository personRepository) {
+        this.personRepository = personRepository;
+    }
+}    
 ```
 
 * Use `field injection` in integration tests.
@@ -55,8 +59,6 @@ public class PersonService {
     }
 }
 ```
-
-Reference: [Stop overusing interfaces](http://blog.hovland.xyz/2017-04-22-stop-overusing-interfaces/)
 
 ## Controllers
 

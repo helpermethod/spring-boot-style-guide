@@ -91,15 +91,21 @@ public class PersonController {
  
 ```java
 // bad
-@RequestMapping(method = RequestMethod.GET, value = "/person/{id}")
-public Person show(@PathVariable long id) {
-    // more code
+@RestController
+public class PersonController {
+    @RequestMapping(method = RequestMethod.GET, value = "/person/{id}")
+    public Person show(@PathVariable long id) {
+        // more code
+    }
 }
 
 // good
-@GetMapping("/person/{id}")
-public Person show(@PathVariable long id) {
-    // more code
+@RestController
+public class PersonController {
+    @GetMapping("/person/{id}")
+    public Person show(@PathVariable long id) {
+        // more code
+    }
 }
 ```
 

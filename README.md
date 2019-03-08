@@ -30,7 +30,7 @@ public class PersonService {
 
 * Use `field injection` in integration tests.
 
-> Why? ``
+> Why?
 
 ```java
 TBD

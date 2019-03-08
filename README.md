@@ -34,7 +34,7 @@ TBD
 
 * Avoid single implementation interfaces.
 
-> Why? TBD
+> Why? A class already exposes an interface: its public members. Adding an identical `interface` definition makes the code harder to navigate and violates both [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) and [YAGNI](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it).
 
 ```java
 // bad

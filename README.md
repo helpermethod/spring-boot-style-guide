@@ -39,7 +39,8 @@ TBD
 * Avoid single implementation interfaces.
 
 > Why? A class already exposes an interface: its public members. Adding an identical `interface` definition makes the code harder to navigate and violates [YAGNI](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it).
-> But what about testing? Earlier mocking frameworks were only capable of mocking interfaces. Recent frameworks like [Mockito](https://site.mockito.org/) will mock concrete classes just fine. 
+>
+> What about testing? Earlier mocking frameworks were only capable of mocking interfaces. Recent frameworks like [Mockito](https://site.mockito.org/) will mock concrete classes just fine. 
 
 ```java
 // bad

@@ -118,7 +118,7 @@ public class PersonController {
 ```java
 // bad
 public class Person {
-    privat String firstname;
+    private String firstname;
     private String lastname;
 
     public void setFirstname() {

@@ -34,9 +34,6 @@ public class PersonService {
 }    
 ```
 
-Further Reading
-http://olivergierke.de/2013/11/why-field-injection-is-evil/
-
 * Use `field injection` in integration tests.
 
 > Why?

@@ -117,6 +117,8 @@ public class PersonController {
 }
 ```
 
+**[⬆ back to top](#table-of-contents)**
+
 ## Serialization
 
 * Do not map your JSON objects to `JavaBeans`.
@@ -167,3 +169,5 @@ public class Person {
     }
 }
 ```
+
+**[⬆ back to top](#table-of-contents)**

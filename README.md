@@ -5,6 +5,12 @@ An opinionated guide on developing web applications with Spring Boot. Inspired b
 [![Join the chat at https://gitter.im/helpermethod/spring-boot-style-guide](https://badges.gitter.im/helpermethod/spring-boot-style-guide.svg)](https://gitter.im/helpermethod/spring-boot-style-guide?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/helpermethod/spring-boot-style-guide/master/LICENSE)
 
+## Table Of Contents
+
+* [Dependendency Injection](#dependency-injection)
+* [Controllers](#controllers)
+* [Serialization](#serialization)
+
 ## Dependency Injection
 
 * Use `constructor injection`. Avoid `field injection`.
@@ -61,6 +67,8 @@ public class PersonService {
     }
 }
 ```
+
+**[⬆ back to top](#table-of-contents)**
 
 ## Controllers
 

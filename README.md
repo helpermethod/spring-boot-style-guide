@@ -7,13 +7,13 @@ An opinionated guide on developing web applications with Spring Boot. Inspired b
 
 ## Table of Contents
 
-* [Dependendency Injection](#dependency-injection)
+* [Dependency Injection](#dependency-injection)
 * [Controllers](#controllers)
 * [Serialization](#serialization)
 
 ## Dependency Injection
 
-* Use `constructor injection`. Avoid `field injection`.
+* Use `constructor injection` in application code.
 
 > Why? Constructor injection makes dependencies explicit and forces you to provide all mandatory dependencies when creating instances of your component.
 

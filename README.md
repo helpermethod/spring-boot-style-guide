@@ -36,10 +36,13 @@ public class PersonService {
 
 * Use `field injection` in integration tests.
 
-> Why?
-
 ```java
-TBD
+// good
+@WebMvcTest
+class PersonControllerTests {
+    @Autowired
+    MockMvc mockMvc;
+}
 ```
 
 * Avoid single implementation interfaces.

@@ -18,14 +18,14 @@ An opinionated guide on developing web applications with Spring Boot. Inspired b
 > Why? Constructor injection makes dependencies explicit and forces you to provide all mandatory dependencies when creating instances of your component.
 
 ```java
+// bad
 public class PersonService {
-    // bad
     @AutoWired
     private PersonRepository personRepositoy;
 }
 
+// good
 public class PersonService {
-    // good
     private final PersonRepository personRepository;
 
     public PersonService(PersonRepository personRepository) {

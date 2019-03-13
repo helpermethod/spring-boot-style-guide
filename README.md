@@ -13,7 +13,7 @@ An opinionated guide on developing web applications with Spring Boot. Inspired b
 
 ## Dependency Injection
 
-* Use `constructor injection` in application code.
+* Use `constructor injection`. Avoid `field injection`.
 
 > Why? Constructor injection makes dependencies explicit and forces you to provide all mandatory dependencies when creating instances of your component.
 
@@ -32,17 +32,6 @@ public class PersonService {
         this.personRepository = personRepository;
     }
 }    
-```
-
-* Use `field injection` in integration tests.
-
-```java
-// good
-@WebMvcTest
-class PersonControllerTests {
-    @Autowired
-    MockMvc mockMvc;
-}
 ```
 
 * Avoid single implementation interfaces.

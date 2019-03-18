@@ -167,4 +167,6 @@ public class Person {
 
 ## Testing
 
+* Use [AssertJ](http://joel-costigliola.github.io/assertj/). Avoid [Hamcrest](http://hamcrest.org/).
+
 **[⬆ back to top](#table-of-contents)**

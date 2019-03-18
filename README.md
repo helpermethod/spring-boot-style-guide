@@ -167,6 +167,8 @@ public class Person {
 
 ## Testing
 
+* Keep Spring out of your unit tests.
+
 * Use [AssertJ](http://joel-costigliola.github.io/assertj/). Avoid [Hamcrest](http://hamcrest.org/).
 
 **[⬆ back to top](#table-of-contents)**

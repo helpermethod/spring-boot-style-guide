@@ -10,6 +10,7 @@ An opinionated guide on developing web applications with Spring Boot. Inspired b
 * [Dependency Injection](#dependency-injection)
 * [Controllers](#controllers)
 * [Serialization](#serialization)
+* [Testing](#testing)
 
 ## Dependency Injection
 
@@ -161,5 +162,9 @@ public class Person {
     }
 }
 ```
+
+**[⬆ back to top](#table-of-contents)**
+
+## Testing
 
 **[⬆ back to top](#table-of-contents)**

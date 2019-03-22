@@ -167,7 +167,6 @@ public class Person {
     private final String firstname;
     private final String lastname;
 
-    // if you have more than one visible constructor, @JsonCreator is required to select the constructor for deserialization
     public Person(String firstname, String lastname) {
         this.firstname = firstname;
         this.lastname = lastname;

@@ -146,7 +146,7 @@ public class Person {
     private final String firstname;
     private final String lastname;
 
-    // this requires at least Spring Boot 2.0 to work out of the box
+    // requires at least Spring Boot 2.0 to work out of the box
     @JsonCreator
     public Person(String firstname, String lastname) {
         this.firstname = firstname;
@@ -167,6 +167,8 @@ public class Person {
     private final String firstname;
     private final String lastname;
 
+    // if the class has a only one constructor, the @JsonCreator annotation
+    // can be left off
     public Person(String firstname, String lastname) {
         this.firstname = firstname;
         this.lastname = lastname;

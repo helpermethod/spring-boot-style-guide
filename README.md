@@ -189,6 +189,25 @@ public class Person {
 
 * Keep Spring out of your unit tests.
 
+```java
+class PersonServiceTests {
+    @Test
+    void testfindPersonById() {
+        // given
+        var personRepository = mock(PersonRepository.class);
+        when(personRepository.findById(1L)).thenReturn(Optional.of(new Person("Oliver", "Weiler")));
+      
+        var personService = new PersonService(personRepository);
+        
+        // when
+        var person = personService.findPersonById(1L);
+        
+        // then
+        assertThat(person).extracting("firstname", "lastname").containsExactly("Oliver", "Weiler");
+    }
+}
+```
+
 * Use [AssertJ](http://joel-costigliola.github.io/assertj/). Avoid [Hamcrest](http://hamcrest.org/).
 
 **[⬆ back to top](#table-of-contents)**

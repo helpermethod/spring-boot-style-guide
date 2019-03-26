@@ -194,14 +194,14 @@ class PersonServiceTests {
     @Test
     void testfindPersonById() {
         // given
-        var personRepository = mock(PersonRepository.class);
+        PersonRepository personRepository = mock(PersonRepository.class);
         when(personRepository.findById(1L)).thenReturn(Optional.of(new Person("Oliver", "Weiler")));
-      
-        var personService = new PersonService(personRepository);
-        
+
+        PersonService personService = new PersonService(personRepository);
+
         // when
-        var person = personService.findPersonById(1L);
-        
+        Person person = personService.findPersonById(1L);
+
         // then
         assertThat(person).extracting("firstname", "lastname").containsExactly("Oliver", "Weiler");
     }

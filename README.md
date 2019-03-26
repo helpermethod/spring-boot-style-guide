@@ -167,7 +167,7 @@ public class Person {
     private final String firstname;
     private final String lastname;
 
-    // if the class has a only one constructor, the @JsonCreator annotation can be ommitted
+    // if the class has a only one visible constructor, the @JsonCreator annotation can be ommitted
     public Person(String firstname, String lastname) {
         this.firstname = firstname;
         this.lastname = lastname;

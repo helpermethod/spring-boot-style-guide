@@ -29,6 +29,7 @@ public class PersonService {
 public class PersonService {
     private final PersonRepository personRepository;
 
+    // if the class has only one constructor, the @Autowired annotation can be omitted
     public PersonService(PersonRepository personRepository) {
         this.personRepository = personRepository;
     }
@@ -167,7 +168,7 @@ public class Person {
     private final String firstname;
     private final String lastname;
 
-    // if the class has a only one visible constructor, the @JsonCreator annotation can be ommitted
+    // if the class has a only one constructor, the @JsonCreator annotation can be omitted
     public Person(String firstname, String lastname) {
         this.firstname = firstname;
         this.lastname = lastname;

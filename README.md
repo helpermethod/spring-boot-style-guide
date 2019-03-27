@@ -193,18 +193,18 @@ public class Person {
 ```java
 class PersonServiceTests {
     @Test
-    void testfindPersonById() {
+    void testGetPersons() {
         // given
         PersonRepository personRepository = mock(PersonRepository.class);
-        when(personRepository.findById(1L)).thenReturn(Optional.of(new Person("Oliver", "Weiler")));
+        when(personRepository.findAll()).thenReturn(List.of(new Person("Oliver", "Weiler")));
 
         PersonService personService = new PersonService(personRepository);
 
         // when
-        Person person = personService.findPersonById(1L);
+        List<Person> persons = personService.getPersons();
 
         // then
-        assertThat(person).extracting("firstname", "lastname").containsExactly("Oliver", "Weiler");
+        assertThat(persons).extracting("firstname", "lastname").containsExactly("Oliver", "Weiler");
     }
 }
 ```

@@ -45,18 +45,18 @@ public class PersonService {
 ```java
 // bad
 public interface PersonService {
-    Person createPerson(String firstname, String lastname);
+    List<Person> getPersons();
 }
 
 public class PersonServiceImpl implements PersonService {
-    public Person createPerson(String firstname, String lastname) {
+    public List<Person> getPersons() {
         // more code
     }
 }
 
 // good
 public class PersonService {
-    public Person createPerson(String firstname, String lastname) {
+    public List<Person> getPersons() {
         // more code
     }
 }
@@ -210,5 +210,12 @@ class PersonServiceTests {
 ```
 
 * Use [AssertJ](http://joel-costigliola.github.io/assertj/). Avoid [Hamcrest](http://hamcrest.org/).
+
+```java
+// bad
+assertThat(person.getFirstname(), is(equalTo("Oliver")));
+// good
+assertThat(person.getFirstname()).isEqualTo("Oliver");
+```
 
 **[⬆ back to top](#table-of-contents)**

@@ -214,6 +214,7 @@ class PersonServiceTests {
 ```java
 // bad
 assertThat(person.getFirstname(), is(equalTo("Oliver")));
+
 // good
 assertThat(person.getFirstname()).isEqualTo("Oliver");
 ```

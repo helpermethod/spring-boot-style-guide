@@ -11,6 +11,7 @@ An opinionated guide on developing web applications with Spring Boot. Inspired b
 * [Controllers](#controllers)
 * [Serialization](#serialization)
 * [Testing](#testing)
+* [Monitoring](#monitoring)
 
 ## Dependency Injection
 
@@ -218,5 +219,11 @@ assertThat(person.getFirstname(), is(equalTo("Oliver")));
 // good
 assertThat(person.getFirstname()).isEqualTo("Oliver");
 ```
+
+**[⬆ back to top](#table-of-contents)**
+
+## Monitoring
+
+TBD
 
 **[⬆ back to top](#table-of-contents)**

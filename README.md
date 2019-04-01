@@ -148,7 +148,7 @@ public class Person {
     private final String firstname;
     private final String lastname;
 
-    // requires at least Spring Boot 2.0 to work out of the box
+    // requires Spring Boot 2.0 or higher to work out of the box
     @JsonCreator
     public Person(String firstname, String lastname) {
         this.firstname = firstname;

@@ -29,7 +29,7 @@ public class PersonService {
 public class PersonService {
     private final PersonRepository personRepository;
 
-    // if the class has only one constructor, the @Autowired annotation can be omitted
+    // if the class has only one constructor, @Autowired can be omitted
     public PersonService(PersonRepository personRepository) {
         this.personRepository = personRepository;
     }
@@ -111,6 +111,8 @@ public class PersonController {
 }
 ```
 
+* Do not unnecessarilty add `@RequestParam`
+
 **[⬆ back to top](#table-of-contents)**
 
 ## Serialization
@@ -147,8 +149,8 @@ public class PersonDto {
     private final String firstname;
     private final String lastname;
 
-    // requires your code to be compiled with a Java 8 compliant compiler with the -parameter flag
-    // turned on
+    // requires your code to be compiled with a Java 8 compliant compiler 
+    // with the -parameter flag turned on
     // as of Spring Boot 2.0 or higher, this is enabled by default
     @JsonCreator
     public PersonDto(String firstname, String lastname) {
@@ -170,7 +172,7 @@ public class PersonDto {
     private final String firstname;
     private final String lastname;
 
-    // if the class has a only one constructor, the @JsonCreator annotation can be omitted
+    // if the class has a only one constructor, @JsonCreator can be omitted
     public PersonDto(String firstname, String lastname) {
         this.firstname = firstname;
         this.lastname = lastname;

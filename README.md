@@ -11,7 +11,6 @@ An opinionated guide on developing web applications with Spring Boot. Inspired b
 * [Controllers](#controllers)
 * [Serialization](#serialization)
 * [Testing](#testing)
-* [Monitoring](#monitoring)
 
 ## Dependency Injection
 
@@ -148,8 +147,8 @@ public class PersonDto {
     private final String firstname;
     private final String lastname;
 
-    // requires your code to be compiled with a Java 8 compliant compiler
-    // with the -parameter flag turned on
+    // requires your code to be compiled with a Java 8 compliant compiler with the -parameter flag
+    // turned on
     // as of Spring Boot 2.0 or higher, this works out of the box
     @JsonCreator
     public PersonDto(String firstname, String lastname) {
@@ -234,11 +233,5 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 assertThat(persons).isNotEmpty();
 ```
-
-**[⬆ back to top](#table-of-contents)**
-
-## Monitoring
-
-TBD
 
 **[⬆ back to top](#table-of-contents)**

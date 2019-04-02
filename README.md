@@ -111,7 +111,10 @@ public class PersonController {
 }
 ```
 
-* Do not unnecessarilty add `@RequestParam`
+* Do not unnecessarilty add `@RequestParam` to your query parameters.
+
+```java
+```
 
 **[⬆ back to top](#table-of-contents)**
 

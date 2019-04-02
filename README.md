@@ -150,7 +150,7 @@ public class PersonDto {
 
     // requires Spring Boot 2.0 or higher to work out of the box
     @JsonCreator
-    public Person(String firstname, String lastname) {
+    public PersonDto(String firstname, String lastname) {
         this.firstname = firstname;
         this.lastname = lastname;
     }
@@ -170,7 +170,7 @@ public class PersonDto {
     private final String lastname;
 
     // if the class has a only one constructor, the @JsonCreator annotation can be omitted
-    public Person(String firstname, String lastname) {
+    public PersonDto(String firstname, String lastname) {
         this.firstname = firstname;
         this.lastname = lastname;
     }

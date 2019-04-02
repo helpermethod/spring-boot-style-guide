@@ -212,7 +212,7 @@ class PersonServiceTests {
 
 * Use [AssertJ](http://joel-costigliola.github.io/assertj/). Avoid [Hamcrest](http://hamcrest.org/).
 
-> Why? `AssertJ` is more actively developed, requires only one static import, and allows you to discover assertions through code completion.
+> Why? `AssertJ` is more actively developed, requires only one static import, and allows you to discover assertions through autocompletion.
 
 ```java
 // bad

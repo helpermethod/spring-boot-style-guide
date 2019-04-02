@@ -91,7 +91,7 @@ public class PersonController {
 ```
 
 * Use `@GetMapping`, `@PostMapping` etc. instead of `@RequestMapping`.
- 
+
 ```java
 // bad
 @RestController
@@ -122,7 +122,7 @@ public class PersonController {
 
 ```java
 // bad
-public class Person {
+public class PersonDto {
     private String firstname;
     private String lastname;
 
@@ -144,7 +144,7 @@ public class Person {
 }
 
 // good
-public class Person {
+public class PersonDto {
     private final String firstname;
     private final String lastname;
 
@@ -165,7 +165,7 @@ public class Person {
 }
 
 // best
-public class Person {
+public class PersonDto {
     private final String firstname;
     private final String lastname;
 
@@ -205,19 +205,32 @@ class PersonServiceTests {
         List<Person> persons = personService.getPersons();
 
         // then
-        assertThat(persons).extracting("firstname", "lastname").containsExactly("Oliver", "Weiler");
+        assertThat(persons).extracting(Person::getFirstname, Person::getLastname).containsExactly("Oliver", "Weiler");
     }
 }
 ```
 
 * Use [AssertJ](http://joel-costigliola.github.io/assertj/). Avoid [Hamcrest](http://hamcrest.org/).
 
+> Why? TBD
+
 ```java
 // bad
-assertThat(person.getFirstname(), is(equalTo("Oliver")));
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.not;
+import static org.hamcrest.Matchers.empty;
+
+// more code
+
+assertThat(List.of(new Person("Oliver", "Weiler")), is(not(empty())));
 
 // good
-assertThat(person.getFirstname()).isEqualTo("Oliver");
+import static org.assertj.core.api.Assertions.assertThat;
+
+// more code
+
+assertThat(persons).isNotEmpty();
 ```
 
 **[⬆ back to top](#table-of-contents)**

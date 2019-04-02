@@ -222,7 +222,8 @@ import static org.hamcrest.Matchers.not;
 import static org.hamcrest.Matchers.empty;
 
 // more code
-assertThat(List.of(new Person("Oliver", "Weiler")), is(not(empty())));
+
+assertThat(persons), is(not(empty())));
 
 // good
 import static org.assertj.core.api.Assertions.assertThat;

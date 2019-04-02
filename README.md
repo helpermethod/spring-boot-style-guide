@@ -148,7 +148,7 @@ public class PersonDto {
     private final String firstname;
     private final String lastname;
 
-    // requires Spring Boot 2.0 or higher to work out of the box
+    // requires you code to be compiled with a Java 8 compliant compiler with the -parameter flag turned on
     @JsonCreator
     public PersonDto(String firstname, String lastname) {
         this.firstname = firstname;

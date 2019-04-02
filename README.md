@@ -23,6 +23,8 @@ An opinionated guide on developing web applications with Spring Boot. Inspired b
 public class PersonService {
     @AutoWired
     private PersonRepository personRepositoy;
+    
+    // more code
 }
 
 // good
@@ -33,6 +35,8 @@ public class PersonService {
     public PersonService(PersonRepository personRepository) {
         this.personRepository = personRepository;
     }
+    
+    // more code
 }    
 ```
 
@@ -73,7 +77,7 @@ public class PersonService {
 @Controller
 public class PersonController {
     @ResponseBody
-    @GetMapping("/person/{id}")
+    @GetMapping("/persons/{id}")
     public Person show(@PathVariable long id) {
         // more code
     }
@@ -82,7 +86,7 @@ public class PersonController {
 // good
 @RestController
 public class PersonController {
-    @GetMapping("/person/{id}")
+    @GetMapping("/persons/{id}")
     public Person show(@PathVariable long id) {
         // more code
     }
@@ -95,7 +99,7 @@ public class PersonController {
 // bad
 @RestController
 public class PersonController {
-    @RequestMapping(method = RequestMethod.GET, value = "/person/{id}")
+    @RequestMapping(method = RequestMethod.GET, value = "/persons/{id}")
     public Person show(@PathVariable long id) {
         // more code
     }
@@ -104,14 +108,14 @@ public class PersonController {
 // good
 @RestController
 public class PersonController {
-    @GetMapping("/person/{id}")
+    @GetMapping("/persons/{id}")
     public Person show(@PathVariable long id) {
         // more code
     }
 }
 ```
 
-* Do not unnecessarilty add `@RequestParam` to your query parameters.
+* Do not unnecessarily add `@RequestParam` to your query parameters.
 
 ```java
 ```

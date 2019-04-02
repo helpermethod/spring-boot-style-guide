@@ -212,7 +212,7 @@ class PersonServiceTests {
 
 * Use [AssertJ](http://joel-costigliola.github.io/assertj/). Avoid [Hamcrest](http://hamcrest.org/).
 
-> Why? TBD
+> Why? `AssertJ` is more actively developed, requires only one static import, and allows your IDE to autocomplete the available assertions for the object under test.
 
 ```java
 // bad
@@ -222,7 +222,6 @@ import static org.hamcrest.Matchers.not;
 import static org.hamcrest.Matchers.empty;
 
 // more code
-
 assertThat(List.of(new Person("Oliver", "Weiler")), is(not(empty())));
 
 // good

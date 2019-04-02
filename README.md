@@ -149,7 +149,7 @@ public class PersonDto {
 
     // requires your code to be compiled with a Java 8 compliant compiler with the -parameter flag
     // turned on
-    // as of Spring Boot 2.0 or higher, this works out of the box
+    // as of Spring Boot 2.0 or higher, this is enabled by default
     @JsonCreator
     public PersonDto(String firstname, String lastname) {
         this.firstname = firstname;

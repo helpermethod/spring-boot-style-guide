@@ -156,7 +156,7 @@ public class PersonController {
 
 ```java
 // bad
-public class PersonDto {
+public class Person {
     private String firstname;
     private String lastname;
 
@@ -178,7 +178,7 @@ public class PersonDto {
 }
 
 // good
-public class PersonDto {
+public class Person {
     private final String firstname;
     private final String lastname;
 
@@ -186,7 +186,7 @@ public class PersonDto {
     // with the -parameter flag turned on
     // as of Spring Boot 2.0 or higher, this is enabled by default
     @JsonCreator
-    public PersonDto(String firstname, String lastname) {
+    public Person(String firstname, String lastname) {
         this.firstname = firstname;
         this.lastname = lastname;
     }
@@ -201,12 +201,12 @@ public class PersonDto {
 }
 
 // best
-public class PersonDto {
+public class Person {
     private final String firstname;
     private final String lastname;
 
     // if the class has a only one constructor, @JsonCreator can be omitted
-    public PersonDto(String firstname, String lastname) {
+    public Person(String firstname, String lastname) {
         this.firstname = firstname;
         this.lastname = lastname;
     }

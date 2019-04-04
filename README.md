@@ -122,6 +122,7 @@ public class PersonController {
 @RestController
 public class PersonController {
     @GetMapping("/persons")
+    // if the parameter name matches the query parameter name, @RequestParam can be omitted
     public List<Person> list(@RequestParam("firstname") String firstname) {
         // more code
     }

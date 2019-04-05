@@ -23,8 +23,6 @@ An opinionated guide on developing web applications with Spring Boot. Inspired b
 public class PersonService {
     @AutoWired
     private PersonRepository personRepositoy;
-    
-    // more code
 }
 
 // good
@@ -35,8 +33,6 @@ public class PersonService {
     public PersonService(PersonRepository personRepository) {
         this.personRepository = personRepository;
     }
-    
-    // more code
 }    
 ```
 

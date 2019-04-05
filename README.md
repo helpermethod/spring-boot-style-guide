@@ -254,14 +254,10 @@ import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.not;
 import static org.hamcrest.Matchers.empty;
 
-// more code
-
 assertThat(persons), is(not(empty())));
 
 // good
 import static org.assertj.core.api.Assertions.assertThat;
-
-// more code
 
 assertThat(persons).isNotEmpty();
 ```

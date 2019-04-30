@@ -111,7 +111,7 @@ public class PersonController {
 }
 ```
 
-* Omit `@RequestParam` if the parameter name matches the request parameter name.
+* If the parameter name matches the request parameter name, omit `@RequestParam`.
 
 ```java
 // bad

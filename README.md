@@ -111,7 +111,7 @@ public class PersonController {
 }
 ```
 
-* Don't unnecessarily add `@RequestParam` to your query parameters.
+* Omit `@RequestParam` if the parameter name matches the query parameter name.
 
 ```java
 // bad

@@ -111,37 +111,6 @@ public class PersonController {
 }
 ```
 
-* If the method parameter name matches the request parameter name, omit `@RequestParam`. 
-
-```java
-// bad
-@RestController
-public class PersonController {
-    @GetMapping("/persons")
-    public List<Person> list(@RequestParam("firstname") String firstname) {
-        // more code
-    }
-}
-
-// still bad
-@RestController
-public class PersonController {
-    @GetMapping("/persons")
-    public List<Person> list(@RequestParam String firstname) {
-        // more code
-    }
-}
-
-// good
-@RestController
-public class PersonController {
-    @GetMapping("/persons")
-    public List<Person> list(String firstname) {
-        // more code
-    }
-}
-```
-
 **[⬆ back to top](#table-of-contents)**
 
 ## Serialization

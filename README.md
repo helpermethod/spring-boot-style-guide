@@ -113,7 +113,8 @@ public class PersonController {
 
 * Simplify your controller keeping it fin
 
-> Why? To avoid [SRP](https://en.wikipedia.org/wiki/Single-responsibility_principle#:~:text=The%20single%2Dresponsibility%20principle%20(SRP,it%20should%20encapsulate%20that%20part.) violations;
+> Why? To avoid [SRP](https://en.wikipedia.org/wiki/Single-responsibility_principle#:~:text=The%20single%2Dresponsibility%20principle%20(SRP,it%20should%20encapsulate%20that%20part.)) violations;
+
 > Where should I put my business logic? Keep the bussines logic [encapsulated](https://en.wikipedia.org/wiki/Encapsulation_(computer_programming)) into your services or specialized classes;
 
 ```java

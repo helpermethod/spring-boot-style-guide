@@ -125,7 +125,7 @@ public ResponseEntity<Void> postNewUser(@RequestBody UserRequest userRequest) {
         throw new IllegalArgumentException("Sorry, only users greater or equal than 18 years old.");
     }
 
-    if (userRequest.hasJob()) {
+    if (!userRequest.hasJob()) {
         throw new IllegalArgumentException("Sorry, only users working.");
     }
 

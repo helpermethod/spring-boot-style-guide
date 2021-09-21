@@ -111,7 +111,7 @@ public class PersonController {
 }
 ```
 
-* Simplify your controller keeping it fin
+* Simplify your controller keeping it thin
 
 > Why? To avoid [SRP](https://en.wikipedia.org/wiki/Single-responsibility_principle#:~:text=The%20single%2Dresponsibility%20principle%20(SRP,it%20should%20encapsulate%20that%20part.)) violations;
 

@@ -111,6 +111,56 @@ public class PersonController {
 }
 ```
 
+* Simplify your controller keeping it thin
+
+> Why? To avoid [SRP](https://en.wikipedia.org/wiki/Single-responsibility_principle#:~:text=The%20single%2Dresponsibility%20principle%20(SRP,it%20should%20encapsulate%20that%20part.)) violations;
+
+> Where should I put my business logic? Keep the bussines logic [encapsulated](https://en.wikipedia.org/wiki/Encapsulation_(computer_programming)) into your services or specialized classes;
+
+```java
+// bad
+@PostMapping("/users")
+public ResponseEntity<Void> postNewUser(@RequestBody UserRequest userRequest) {
+    if (userRequest.isLessThanEighteenYearsOld()) {
+        throw new IllegalArgumentException("Sorry, only users greater or equal than 18 years old.");
+    }
+
+    if (!userRequest.hasJob()) {
+        throw new IllegalArgumentException("Sorry, only users working.");
+    }
+
+    if (!this.userService.hasUsernameAvailable(userRequest.getUsername())) {
+        throw new IllegalArgumentException(String.format("Sorry, [%s] is not an available username.", userRequest.getUsername()));
+    }
+
+    this.userService.createNewUser(userRequest);
+
+    return ResponseEntity.status(HttpStatus.CREATED).build();
+}
+
+// good
+@PostMapping("/users")
+public ResponseEntity<Void> postNewUser(@RequestBody UserRequest userRequest) {
+    this.userService.createNewUser(userRequest);
+    return ResponseEntity.status(HttpStatus.CREATED).build();
+}
+
+public class UserService {
+
+    // variables declaration
+
+    public void createNewUser(UserRequest userRequest) {
+        this.validateNewUser(userRequest);
+        UserEntity newUserEntity = this.userMapper.mapToEntity(userRequest);
+        this.userRepository.save(newUserEntity);
+    }
+
+    private void validateNewUser(UserRequest userRequest) {
+        // business validations
+    }
+}
+```
+
 **[⬆ back to top](#table-of-contents)**
 
 ## Serialization
